@@ -1,0 +1,103 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.Runtime">
+
+    <!-- ==========================================================
+         DESIGN-DATEI
+         Alle Farben, Schriften und Groessen stehen hier.
+         Mediamatiker: Ihr koennt hier direkt Werte aendern.
+         Aendere nur die Zahlen und Hex-Codes, nicht die Namen.
+         ========================================================== -->
+
+
+    <!-- ============ FARBEN ============ -->
+    <!-- Platzhalter. Bitte durch die echten Werte ersetzen. -->
+
+    <SolidColorBrush x:Key="Hintergrund"  Color="#F4F1DE"/>
+    <SolidColorBrush x:Key="Primaer"      Color="#2D6A4F"/>
+    <SolidColorBrush x:Key="Richtig"      Color="#40916C"/>
+    <SolidColorBrush x:Key="Falsch"       Color="#C1121F"/>
+    <SolidColorBrush x:Key="Textfarbe"    Color="#1B1B1B"/>
+    <SolidColorBrush x:Key="TextAufKnopf" Color="#FFFFFF"/>
+
+
+    <!-- ============ SCHRIFT ============ -->
+    <!-- Aufbau: /Ordner/#InternerSchriftname
+         Der interne Name steht beim Doppelklick auf die .ttf-Datei oben.
+         Er ist NICHT der Dateiname.
+         Solange keine Schrift im Ordner Fonts liegt, nimmt WPF Segoe UI. -->
+
+    <FontFamily x:Key="Hausschrift">Segoe UI</FontFamily>
+    <!-- Spaeter ersetzen durch z.B.:
+    <FontFamily x:Key="Hausschrift">/Fonts/#Montserrat</FontFamily> -->
+
+
+    <!-- ============ GROESSEN ============ -->
+
+    <sys:Double x:Key="SchriftFrage">28</sys:Double>
+    <sys:Double x:Key="SchriftAntwort">18</sys:Double>
+    <sys:Double x:Key="SchriftKlein">14</sys:Double>
+    <CornerRadius x:Key="EckenRadius">8</CornerRadius>
+
+
+    <!-- ============ ANTWORT-KNOEPFE ============ -->
+
+    <Style x:Key="AntwortKnopf" TargetType="Button">
+        <Setter Property="Background"      Value="{StaticResource Primaer}"/>
+        <Setter Property="Foreground"      Value="{StaticResource TextAufKnopf}"/>
+        <Setter Property="FontFamily"      Value="{StaticResource Hausschrift}"/>
+        <Setter Property="FontSize"        Value="{StaticResource SchriftAntwort}"/>
+        <Setter Property="Padding"         Value="20,14"/>
+        <Setter Property="Margin"          Value="0,6"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Cursor"          Value="Hand"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+
+        <!-- Runde Ecken gehen nur mit einem eigenen Template.
+             Der Standard-Knopf von Windows kann das nicht. -->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="rahmen"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="{StaticResource EckenRadius}"
+                            Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="rahmen" Property="Opacity" Value="0.85"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="rahmen" Property="Opacity" Value="1.0"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <!-- ============ FRAGETEXT ============ -->
+
+    <Style x:Key="FrageText" TargetType="TextBlock">
+        <Setter Property="FontFamily"   Value="{StaticResource Hausschrift}"/>
+        <Setter Property="FontSize"     Value="{StaticResource SchriftFrage}"/>
+        <Setter Property="FontWeight"   Value="SemiBold"/>
+        <Setter Property="Foreground"   Value="{StaticResource Textfarbe}"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="Margin"       Value="0,0,0,24"/>
+    </Style>
+
+
+    <!-- ============ NORMALER TEXT ============ -->
+
+    <Style x:Key="NormalText" TargetType="TextBlock">
+        <Setter Property="FontFamily"   Value="{StaticResource Hausschrift}"/>
+        <Setter Property="FontSize"     Value="{StaticResource SchriftKlein}"/>
+        <Setter Property="Foreground"   Value="{StaticResource Textfarbe}"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+
+</ResourceDictionary>

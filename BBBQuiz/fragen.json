@@ -1,0 +1,57 @@
+[
+  {
+    "Text": "PLATZHALTER: Wie viele Lehrberufe werden an der BBB unterrichtet?",
+    "Antworten": [
+      "Antwort A",
+      "Antwort B",
+      "Antwort C",
+      "Antwort D"
+    ],
+    "RichtigeAntwort": 0,
+    "Erklaerung": "Diese Frage muss durch eine echte ersetzt werden."
+  },
+  {
+    "Text": "PLATZHALTER: In welchem Jahr wurde die BBB gegruendet?",
+    "Antworten": [
+      "Antwort A",
+      "Antwort B",
+      "Antwort C",
+      "Antwort D"
+    ],
+    "RichtigeAntwort": 1,
+    "Erklaerung": "Diese Frage muss durch eine echte ersetzt werden."
+  },
+  {
+    "Text": "Was ist ein sicheres Passwort?",
+    "Antworten": [
+      "Der eigene Vorname",
+      "12345678",
+      "Mindestens 12 Zeichen mit Zahlen und Sonderzeichen",
+      "Das Geburtsdatum"
+    ],
+    "RichtigeAntwort": 2,
+    "Erklaerung": "Laenge ist wichtiger als Komplexitaet. Ein langer Satz ist besser als ein kurzes Kauderwelsch."
+  },
+  {
+    "Text": "Was bedeutet Phishing?",
+    "Antworten": [
+      "Ein Virus im Drucker",
+      "Gefaelschte Mails, die an Passwoerter kommen wollen",
+      "Ein Verfahren fuer Backups",
+      "Eine Regel in der Firewall"
+    ],
+    "RichtigeAntwort": 1,
+    "Erklaerung": "Der Angreifer gibt sich als Bank, Chef oder IT aus und fischt nach Zugangsdaten."
+  },
+  {
+    "Text": "Wofuer steht die Abkuerzung HTML?",
+    "Antworten": [
+      "HyperText Markup Language",
+      "High Tech Machine Learning",
+      "Home Tool Markup Layer",
+      "Hyper Transfer Media Link"
+    ],
+    "RichtigeAntwort": 0,
+    "Erklaerung": "HTML beschreibt den Aufbau einer Webseite, nicht ihr Aussehen. Das Aussehen macht CSS."
+  }
+]

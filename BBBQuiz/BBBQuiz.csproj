@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>BBBQuiz</RootNamespace>
+    <AssemblyName>BBBQuiz</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Fragen bleiben als Datei neben der .exe liegen.
+         So koennen die Mediamatiker sie ohne Visual Studio aendern. -->
+    <Content Include="fragen.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Schriften und Bilder werden in die .exe eingepackt.
+         Wenn ihr Dateien hinzufuegt, werden sie automatisch erfasst. -->
+    <Resource Include="Fonts\**\*.ttf" />
+    <Resource Include="Fonts\**\*.otf" />
+    <Resource Include="Bilder\**\*.png" />
+    <Resource Include="Bilder\**\*.jpg" />
+  </ItemGroup>
+
+</Project>

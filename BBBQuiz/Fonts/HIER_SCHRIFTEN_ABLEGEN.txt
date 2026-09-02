@@ -1,0 +1,14 @@
+Hier kommen die Schriftdateien (.ttf oder .otf) rein.
+
+Danach in Design.xaml die Zeile anpassen:
+<FontFamily x:Key="Hausschrift">/Fonts/#InternerSchriftname</FontFamily>
+
+Der interne Schriftname steht beim Doppelklick auf die .ttf-Datei ganz oben.
+Er ist NICHT der Dateiname.
+
+Beispiel:
+  Datei heisst:  Montserrat-Bold.ttf
+  Interner Name: Montserrat
+  Eintrag:       /Fonts/#Montserrat
+
+Nur Schriften verwenden, die frei nutzbar sind (z.B. Google Fonts).

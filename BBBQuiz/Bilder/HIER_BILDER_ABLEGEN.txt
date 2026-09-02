@@ -1,0 +1,10 @@
+Hier kommen Logo und Icons rein.
+
+Format: PNG mit transparentem Hintergrund.
+
+Empfohlene Groessen:
+  logo.png      ca. 500 px breit
+  Icons         128 x 128 px, quadratisch
+  Fragenbilder  max. 1200 px breit
+
+Immer groesser liefern als angezeigt. Sonst wird es unscharf.
